@@ -1,0 +1,7 @@
+[build]
+  publish = "dist/argon-design-system-angular"
+  command = "npm run build"
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
