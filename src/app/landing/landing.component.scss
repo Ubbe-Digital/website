@@ -1,0 +1,42 @@
+.float-button-whatsapp {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    font-size: 39px;
+    color: #0088cc;
+    z-index: 100;
+    background-color: rgb(30, 169, 82);
+    border-radius: 100px;
+    width: 59px;
+    text-align: center;
+}
+
+.float-button-whatsapp a {
+    color: #0088cc;
+}
+
+.float-button-whatsapp a:hover {
+    color: #28c979;
+}
+
+.float-button-telegram {
+    position: fixed;
+    bottom: 75px;
+    right: 20px;
+    font-size: 59px;
+    color: #0088cc;
+    z-index: 100;
+    background: radial-gradient(#fff 40%,transparent 0);
+}
+
+.float-button-telegram a {
+    color: #0088cc;
+}
+
+.float-button-telegram a:hover {
+    color: #28c979;
+}
+
+.bg-gradient-leve-market {
+    background: linear-gradient(87deg, #220e09 0, #a29581 100%)!important
+}
