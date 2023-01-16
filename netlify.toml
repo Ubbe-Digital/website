@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/argon-design-system-angular"
+  publish = "dist/ubbe-digital"
   command = "npm run build"
 [[redirects]]
 from = "/*"
