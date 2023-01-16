@@ -422,12 +422,12 @@
   <section class="section section-lg">
     <div class="container">
       <div class="row row-grid justify-content-center">
-        <div class="col-lg-8 text-center">
+        <div class="col-lg-12 text-center">
           <h3 class="display-4">Tecnologías preferidas por Ubbe Digital</h3>
-          <br/><br/>
+          <br/>
           <div class="text-center">
             <div class="row justify-content-center">
-              <div class="col-lg-2 col-4" *ngFor="let technology of technologies">
+              <div class="col-lg-1 col-4" *ngFor="let technology of technologies">
                 <a [href]="technology.src" target="_blank" placement="top" [ngbTooltip]="technology.label">
                   <img [src]="technology.src" class="img-fluid" [style]="technology.style">
                 </a>
