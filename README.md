@@ -1,4 +1,6 @@
-# Ubbe Digital Website -> Landing Page - Inspirate in Argon Design System Angular Template
+# Ubbe Digital Website 
+
+## Inspirate in Argon Design System Angular Template
 
 ## Installation
     nvm install 14.20.1
