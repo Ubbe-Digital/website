@@ -9,6 +9,10 @@ var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = 0;
 
+
+declare const gtag: Function;
+
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -17,7 +21,18 @@ var navbarHeight = 0;
 export class AppComponent implements OnInit {
     private _router: Subscription;
 
-    constructor( private renderer : Renderer2, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {}
+    constructor(
+        private renderer : Renderer2,
+        private router: Router,
+        @Inject(DOCUMENT,) private document: any,
+        private element : ElementRef, public location: Location
+    ) {
+        this.router.events.subscribe((event) => {
+            if (event instanceof NavigationEnd) {
+              gtag('config', 'MEASUREMENT-ID', { 'page_path': event.urlAfterRedirects });
+            }      
+        })
+    }
     @HostListener('window:scroll', ['$event'])
     hasScrolled() {
 
