@@ -1,3 +1,17 @@
+.crop-img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50% !important;
+}
+
+.crop-img img {
+    width: 200px;
+    height: auto;
+    margin: -15px 0 0 -10px;
+}
+
+
 .float-button-whatsapp {
     position: fixed;
     bottom: 15px;

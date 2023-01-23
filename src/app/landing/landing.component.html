@@ -197,7 +197,7 @@
       <div class="row row-grid align-items-center">
         <div class="col-md-6 order-lg-2 ml-lg-auto">
           <div class="position-relative pl-md-5">
-            <img src="./assets/img/theme/promo-3.png" class="img-center img-fluid">
+            <img src="./assets/img/leve-market/leve-market-promo.png" class="img-center img-fluid" alt="Leve Market">
           </div>
         </div>
         <div class="col-lg-6 order-lg-1">
@@ -282,7 +282,12 @@
         <!-- Kevin Rojas -->
         <div class="col-md-6 col-lg-6 mb-5 mb-lg-0">
           <div class="px-4">
-            <img src="./assets/img/theme/team-1-800x800.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+            <img 
+              src="./assets/img/team/kevin rojas.jpg"
+              class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+              style="width: 200px;"
+              alt="Kevin Rojas">
+
             <div class="pt-4 text-center">
               <h5 class="title">
                 <span class="d-block mb-1">Kevin Rojas</span>
@@ -305,7 +310,14 @@
         <!-- Irene Fernandez -->
         <div class="col-md-6 col-lg-6 mb-5 mb-lg-0">
           <div class="px-4">
-            <img src="./assets/img/theme/team-4-800x800.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+            <div class="crop-img ounded-circle img-center">
+              <img
+                src="./assets/img/team/irene fernandez.jpg"
+                class="img-fluid shadow shadow-lg--hover"
+                style="width: 200px;"
+                alt="Irene Fernández">
+            </div>
+
             <div class="pt-4 text-center">
               <h5 class="title">
                 <span class="d-block mb-1">Irene Fernández</span>
@@ -430,7 +442,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-1 col-4" *ngFor="let technology of technologies">
                 <a [href]="technology.src" target="_blank" placement="top" [ngbTooltip]="technology.label">
-                  <img [src]="technology.src" class="img-fluid" [style]="technology.style">
+                  <img [src]="technology.src" class="img-fluid" [style]="technology.style" [alt]="technology.label + ' ubbe digital'">
                 </a>
               </div>
             </div>
