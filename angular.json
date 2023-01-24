@@ -149,7 +149,6 @@
       }
     }
   },
-  "defaultProject": "ubbe-digital",
   "cli": {
     "analytics": false
   }
