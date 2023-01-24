@@ -1,62 +1,53 @@
-<footer class="site-footer">
-      
+<footer>
   <hr/>
+
   <div class="container">
     <div class="row">
-
 
       <div class="col-xs-6 col-md-3">
         <h6>Productos</h6>
         <ul>
-          <li><a href="/trade-marketing/leve-market">Leve Market</a></li>
+          <li *ngFor="let product of products">
+            <a [href]="product.path">{{ product.name }}</a>
+          </li>
         </ul>
       </div>
 
       <div class="col-xs-6 col-md-3">
         <h6>Servicios</h6>
         <ul>
-          <li><a href="/trade-marketing">Trade Marketing</a></li>
-          <li><a href="/ecommerce">E-commerce</a></li>
-          <li><a href="/odoo">Odoo</a></li>
+          <li *ngFor="let service of services">
+            <a [href]="service.path">{{ service.name }}</a>
+          </li>
         </ul>
       </div>
 
       <div class="col-xs-6 col-md-3">
         <h6>Enlaces de interes</h6>
         <ul class="footer-links">
-          <li><a href="/about-us">Conócenos</a></li>
-          <li><a href="/contact-us">Contáctanos</a></li>
+          <li><a [routerLink]="['/']" fragment="about-us">Conócenos</a></li>
+          <li><a [routerLink]="['/']" fragment="contact-us">Contáctanos</a></li>
           <li><a href="/blog">Blog</a></li>
         </ul>
       </div>
 
       <div class="col-sm-6 col-md-3">
         <h6>Redes Sociales</h6>
-        <!-- <a style="font-size: 40px" rel="noreferrer" target="_blank" href="https://www.linkedin.com/company/ubbedigital"><FaLinkedin/></a>
-        <a style="font-size: 40px" rel="noreferrer" target="_blank" href="https://www.instagram.com/ubbe.digital/"><FaInstagram/></a>
-        <a style="font-size: 40px" rel="noreferrer" target="_blank" href="https://www.youtube.com/channel/UCkgL9n8HlwKVBv5tVhMnLlA"><FaYoutube/></a>
-        <a style="font-size: 40px" rel="noreferrer" target="_blank" href="https://twitter.com/ubbedigital"></a> -->
-
-        <a href="https://www.instagram.com/ubbe.digital" target="_blank" style="font-size: 40px; padding: 5px;" rel="noreferrer">
-          <i class="fa fa-instagram"></i>
+        <a *ngFor="let item of rrss" [href]="item.url" target="_blank" style="font-size: 40px; padding: 5px;" rel="noreferrer">
+          <i [class]="item.fa_icon"></i>
         </a>
-        <a href="https://twitter.com/ubbedigital" target="_blank" style="font-size: 40px; padding: 5px" rel="noreferrer">
-          <i class="fa fa-twitter-square"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/ubbedigital" target="_blank" style="font-size: 40px; padding: 5px" rel="noreferrer">
-          <i class="fa fa-linkedin"></i>
-        </a>
-      </div>  
+      </div>
 
     </div>
     <hr/>
   </div>
+  
+  <!-- Copyright -->
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-sm-6 col-xs-12">
         <p class="copyright-text">Copyright &copy; 2023 <a href="https://ubbedigital.com">Ubbe Digital</a>: J-500791437 Servicios Ubee Digital C.A.</p>
       </div>
-
     </div>
   </div>
 

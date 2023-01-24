@@ -10,10 +10,6 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes =[
-    { path: 'home',             component: HomeComponent },
-    { path: 'user-profile',     component: ProfileComponent },
-    { path: 'register',           component: SignupComponent },
-    { path: 'login',          component: LoginComponent },
     { path: '', redirectTo: '', pathMatch: 'full', component: LandingComponent },
     { path: '**', component: LandingComponent }
 ];
@@ -23,7 +19,8 @@ const routes: Routes =[
     CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes,{
-      useHash: false
+      useHash: false,
+      anchorScrolling: 'enabled'
     })
   ],
   exports: [

@@ -3,7 +3,7 @@
 /*!
 
 =========================================================
-* Argon Design System Angular - v1.3.0
+* Ubbe Digital Angular - v1.3.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/ubbe-digital
