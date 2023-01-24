@@ -1,3 +1,7 @@
+## [1.4.0] - 2023-01-26
+## Updates
+- Update to angular v15
+
 ## [1.3.0] - 2022-04-08
 ### Updates
 - update to Angular 13
