@@ -1,6 +1,6 @@
 # Ubbe Digital Website 
 
-## Inspirate in Argon Design System Angular Template
+## Made With Angular and Inspirate in Argon Design System Angular Template
 
 ## Installation
     nvm install 18.10.0
