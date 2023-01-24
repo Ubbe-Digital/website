@@ -3,8 +3,8 @@
 ## Inspirate in Argon Design System Angular Template
 
 ## Installation
-    nvm install 14.20.1
-    nvm use 14.20.1
+    nvm install 18.10.0
+    nvm use 18.10.0
     npm install
 ## Run live server
     npm start
