@@ -1,3 +1,13 @@
-User-agent: *
+# *
 
-sitemap: https://www.ubbedigital.com//sitemap.xml
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ubbedigital.com
+
+# Sitemaps
+Sitemap: https://ubbedigital.com/sitemap.xml
+
+# Sitemap: https://ubbedigital.com/docs/sitemap.xml
+# Sitemap:https://ubbedigital.com/blog/sitemap.xml
