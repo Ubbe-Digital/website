@@ -87,4 +87,11 @@ export class AppComponent implements OnInit {
       });
       this.hasScrolled();
     }
+
+    scrollTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 }

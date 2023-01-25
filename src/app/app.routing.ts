@@ -3,14 +3,15 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
-import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
-import { LoginComponent } from './login/login.component';
+import { DocComponent } from './doc/doc.component';
+import { BlogComponent } from './blog/blog.component';
+
 
 const routes: Routes =[
     { path: '', redirectTo: '', pathMatch: 'full', component: LandingComponent },
+    { path: 'docs', component: DocComponent },
+    { path: 'blog', component: BlogComponent },
     { path: '**', component: LandingComponent }
 ];
 
