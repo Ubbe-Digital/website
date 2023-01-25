@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
-import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
@@ -17,6 +16,7 @@ import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
 import { DocComponent } from './doc/doc.component';
 import { BlogComponent } from './blog/blog.component';
+import { BackScrollingComponent } from './shared/components/back-scrolling/back-scrolling.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { BlogComponent } from './blog/blog.component';
     FooterComponent,
     LoginComponent,
     DocComponent,
-    BlogComponent
+    BlogComponent,
+    BackScrollingComponent
   ],
   imports: [
     BrowserModule,

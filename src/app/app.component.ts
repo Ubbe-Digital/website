@@ -1,15 +1,13 @@
-import { Component, OnInit, Inject, Renderer2, ElementRef, ViewChild, HostListener } from '@angular/core';
+import { Component, OnInit, Inject, Renderer2, ElementRef, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { DOCUMENT } from '@angular/common';
-import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
+import { DOCUMENT, Location } from '@angular/common';
 import { filter, Subscription } from 'rxjs';
 
-var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = 0;
 
-
+// Google Analytics 4
 declare const gtag: Function;
 
 
@@ -86,12 +84,5 @@ export class AppComponent implements OnInit {
           });
       });
       this.hasScrolled();
-    }
-
-    scrollTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
     }
 }
