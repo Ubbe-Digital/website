@@ -1,0 +1,16 @@
+deploy:
+  stage: deploy
+  only:
+    - 'main'
+  before_script:
+    - chmod 400 $SSH_KEY
+  script:
+    - ssh -o StrictHostKeyChecking=no -i $SSH_KEY $VPS2_SSH_CONNECTION "
+        cd /opt/ubbedigital_app/web-app &&
+        git checkout . &&
+        git checkout main &&
+        git pull origin main &&
+        npm update && npm run build &&
+        rm -rf /opt/web_apps/ubbedigital/ &&
+        cp -r www/ /opt/web_apps/ubbedigital/ &&
+        docker restart nginx"
