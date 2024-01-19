@@ -10,7 +10,7 @@ deploy:
         git checkout . &&
         git checkout master &&
         git pull origin master &&
-        npm update && npm run build &&
+        npm run build &&
         rm -rf /opt/web_apps/ubbedigital/ &&
-        cp -r www/ /opt/web_apps/ubbedigital/ &&
+        cp -r dist/ubbe-digital /opt/web_apps/ubbedigital/ &&
         docker restart nginx"
