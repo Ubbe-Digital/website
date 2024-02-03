@@ -19,14 +19,14 @@ export class FooterComponent {
       'name': 'Trade Marketing',
       'path': '/services/trade-marketing'
     },
-    {
-      'name': 'E-commerce',
-      'path': '/services/ecommerce'
-    },
-    {
-      'name': 'Odoo',
-      'path': '/services/odoo'
-    }
+    // {
+    //   'name': 'E-commerce',
+    //   'path': '/services/ecommerce'
+    // },
+    // {
+    //   'name': 'Odoo',
+    //   'path': '/services/odoo'
+    // }
   ]
 
   rrss = [
