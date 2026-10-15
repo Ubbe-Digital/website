@@ -1,3 +1,11 @@
+## [Unreleased]
+### Added
+- Cookie-free analytics with Umami: page views plus clicks on demo, WhatsApp,
+  social links and screenshot tabs. The footer says what is measured.
+
+### Removed
+- Google Analytics.
+
 ## [2.0.0] - 2026-10-12
 ### Changed
 - Rewrite as a static site (HTML/CSS/JS, no build step) hosted on GitHub Pages.
