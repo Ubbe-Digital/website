@@ -1,4 +1,4 @@
-// Mobile menu, nav shadow on scroll, screenshot tabs, footer year.
+// Mobile menu, nav shadow on scroll, screenshot tabs, footer year, Umami link events.
 (() => {
   const nav = document.querySelector('.nav');
   const toggle = document.querySelector('.nav__toggle');
@@ -39,6 +39,20 @@
       select(next);
       next.focus();
     });
+  });
+
+  // Umami events on links (data-evento and data-evento-*). Never data-umami-event on
+  // an <a>: Umami's tracker then calls preventDefault and only navigates after its
+  // request finishes, so on a slow network the link looks dead. umami.track uses
+  // keepalive, so the event is sent and the link navigates right away.
+  document.addEventListener('click', (e) => {
+    const el = e.target.closest('[data-evento]');
+    if (!el) return;
+    const datos = {};
+    for (const [clave, valor] of Object.entries(el.dataset)) {
+      if (clave.startsWith('evento') && clave !== 'evento') datos[clave.slice(6).toLowerCase()] = valor;
+    }
+    window.umami?.track(el.dataset.evento, datos);
   });
 
   document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });

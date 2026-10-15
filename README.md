@@ -51,6 +51,29 @@ Configuración única en GitHub → *Settings → Pages*:
 No tocar los registros de `lm`, `lm-test` ni `vps` (apuntan al VPS de Leve Market),
 ni los MX/TXT de reenvío de correo.
 
+## Analítica (Umami)
+
+`index.html` y `404.html` cargan el script de Umami en el `<head>`. No usa cookies,
+respeta "No rastrear" y solo mide `ubbedigital.com` (`data-domains`): en local no se
+envía nada. El pie avisa qué se mide.
+
+Los clics se declaran con atributos:
+
+- **Enlaces** (`<a>`): `data-evento="..."` y `data-evento-<dato>="..."`; los registra
+  `main.js` sin frenar la navegación. **Nunca** `data-umami-event` en un enlace: el
+  rastreador hace `preventDefault` y navega recién cuando termina su petición.
+- **Botones** que no navegan (las pestañas de capturas): `data-umami-event` funciona bien.
+
+| Evento | Datos |
+|---|---|
+| `solicitar-demo` | `origen`: `nav`, `hero` |
+| `whatsapp` | `origen`: `contacto`, `flotante` |
+| `red-social` | `red`: `instagram`, `linkedin`, `x` |
+| `captura` | `pestana`: `admin`, `campo` |
+
+Para saber de dónde llegan las visitas, los enlaces de las bios llevan `utm_source`
+(por ejemplo `https://ubbedigital.com/?utm_source=instagram`).
+
 ## Capturas de Leve Market
 
 Las capturas de `site/assets/img/screens/` se tomaron de la app real (repo Leve Market)

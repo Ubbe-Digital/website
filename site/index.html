@@ -43,14 +43,9 @@
   }
   </script>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85DQ1JYVGQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-85DQ1JYVGQ');
-  </script>
+
+  <!-- Umami (sin cookies): solo mide el dominio publicado y respeta "No rastrear". -->
+  <script defer src="https://analitica.ubbedigital.com/script.js" data-website-id="fb8efa33-8aea-48b8-8e24-e499f422f6e6" data-domains="ubbedigital.com" data-do-not-track="true"></script>
 </head>
 <body>
   <!-- Icon sprite -->
@@ -96,7 +91,7 @@
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#capturas">Capturas</a>
         <a href="#equipo">Equipo</a>
-        <a class="btn btn--sm btn--primary" href="#contacto">Solicitar demo</a>
+        <a class="btn btn--sm btn--primary" href="#contacto" data-evento="solicitar-demo" data-evento-origen="nav">Solicitar demo</a>
       </nav>
     </div>
   </header>
@@ -110,7 +105,7 @@
           <h1>Mide la Tienda Perfecta en cada punto de venta.</h1>
           <p class="lead">Leve Market es la plataforma de Ubbe Digital para equipos de trade marketing: tus mercaderistas registran cada visita desde el teléfono, incluso sin conexión, y tú ves el puntaje de cada tienda, cadena y región en un solo tablero.</p>
           <div class="hero__cta">
-            <a class="btn btn--primary" href="#contacto">Solicitar una demo <svg class="ico"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--primary" href="#contacto" data-evento="solicitar-demo" data-evento-origen="hero">Solicitar una demo <svg class="ico"><use href="#i-arrow"/></svg></a>
             <a class="btn btn--ghost" href="#tienda-perfecta">Ver cómo se mide</a>
           </div>
           <ul class="hero__facts">
@@ -293,8 +288,8 @@
         </header>
 
         <div class="tabs" role="tablist" aria-label="Vistas de la aplicación">
-          <button class="tabs__btn" role="tab" id="tab-admin" aria-controls="panel-admin" aria-selected="true">Administración</button>
-          <button class="tabs__btn" role="tab" id="tab-campo" aria-controls="panel-campo" aria-selected="false" tabindex="-1">Mercaderista</button>
+          <button class="tabs__btn" role="tab" id="tab-admin" aria-controls="panel-admin" aria-selected="true" data-umami-event="captura" data-umami-event-pestana="admin">Administración</button>
+          <button class="tabs__btn" role="tab" id="tab-campo" aria-controls="panel-campo" aria-selected="false" tabindex="-1" data-umami-event="captura" data-umami-event-pestana="campo">Mercaderista</button>
         </div>
 
         <div class="tabs__panel gallery gallery--desktop" role="tabpanel" id="panel-admin" aria-labelledby="tab-admin">
@@ -359,7 +354,7 @@
           <p class="lead">Escríbenos y preparamos una demostración con tu portafolio, tus cadenas y tu ponderación.</p>
         </div>
         <div class="contact__actions">
-          <a class="btn btn--light" href="https://wa.me/584241519984?text=Hola%2C%20quiero%20una%20demo%20de%20Leve%20Market" target="_blank" rel="noopener">
+          <a class="btn btn--light" href="https://wa.me/584241519984?text=Hola%2C%20quiero%20una%20demo%20de%20Leve%20Market" target="_blank" rel="noopener" data-evento="whatsapp" data-evento-origen="contacto">
             <svg class="ico"><use href="#i-whatsapp"/></svg> Escribir por WhatsApp
           </a>
         </div>
@@ -381,17 +376,17 @@
         <a href="#contacto">Contacto</a>
       </nav>
       <div class="footer__social">
-        <a href="https://www.instagram.com/ubbe.digital" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico"><use href="#i-instagram"/></svg></a>
-        <a href="https://www.linkedin.com/company/ubbedigital" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico"><use href="#i-linkedin"/></svg></a>
-        <a href="https://twitter.com/ubbedigital" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg class="ico"><use href="#i-x"/></svg></a>
+        <a href="https://www.instagram.com/ubbe.digital" target="_blank" rel="noopener" aria-label="Instagram" data-evento="red-social" data-evento-red="instagram"><svg class="ico"><use href="#i-instagram"/></svg></a>
+        <a href="https://www.linkedin.com/company/ubbedigital" target="_blank" rel="noopener" aria-label="LinkedIn" data-evento="red-social" data-evento-red="linkedin"><svg class="ico"><use href="#i-linkedin"/></svg></a>
+        <a href="https://twitter.com/ubbedigital" target="_blank" rel="noopener" aria-label="X (Twitter)" data-evento="red-social" data-evento-red="x"><svg class="ico"><use href="#i-x"/></svg></a>
       </div>
     </div>
     <div class="wrap footer__legal">
-      <p>© <span data-year>2026</span> Servicios Ubbe Digital C.A.</p>
+      <p>© <span data-year>2026</span> Servicios Ubbe Digital C.A. · Medimos las visitas y los clics de forma anónima y sin cookies.</p>
     </div>
   </footer>
 
-  <a class="fab" href="https://wa.me/584241519984" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <a class="fab" href="https://wa.me/584241519984" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" data-evento="whatsapp" data-evento-origen="flotante">
     <svg class="ico"><use href="#i-whatsapp"/></svg>
   </a>
 
